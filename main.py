@@ -153,14 +153,14 @@ def notify():
   CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
   # Step 4: POST request to edit a page
-  PARAMS_3 = {
-      "action": "edit",
-      "title": "Test_Inactive_List",
-      "token": CSRF_TOKEN,
-      "format": "json",
-      for user in userlist:
+  for user in userlist:
+    PARAMS_3 = {
+        "action": "edit",
+        "title": "Test_Inactive_List",
+        "token": CSRF_TOKEN,
+        "format": "json",
         "appendtext": user
-  }
+    }
 
   R = S.post(URL, data=PARAMS_3)
   DATA = R.json()
