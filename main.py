@@ -161,7 +161,7 @@ def notify():
         "title": "Test_Inactive_List",
         "token": CSRF_TOKEN,
         "format": "json",
-        "appendtext": str(userList[count])
+        "appendtext": str(userlist[count])
     }
     count = count + 1
 
