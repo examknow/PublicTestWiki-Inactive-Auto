@@ -158,7 +158,8 @@ def notify():
       "title": "Test_Inactive_List",
       "token": CSRF_TOKEN,
       "format": "json",
-      "appendtext": userlist
+      for user in userlist:
+        "appendtext": user
   }
 
   R = S.post(URL, data=PARAMS_3)
