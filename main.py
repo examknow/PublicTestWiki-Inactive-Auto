@@ -91,6 +91,7 @@ def notify():
   removedate = input("Removal date: ")
   date = input("Today's Date: " )
   users = input("How many users are being removed? ")
+  fromheader = input("Your Email: ")
   userlist = []
   count = 0
   while count < int(users):
@@ -106,6 +107,10 @@ def notify():
     count = count + 1
     time.sleep(0.5)
   S = requests.Session()
+  headers = {
+      'User-Agent': 'PublicTestWikiInactiveAuto-github/rhinosf1-fortestwikiconusls',
+      'From': fromheader
+  }
 
   URL = "https://test.miraheze.org/w/api.php"
 
